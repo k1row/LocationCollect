@@ -1,0 +1,9 @@
+curl -d '{"ssid": "","bssid": "00:11:22:33:44:55","capabilities": "aaaaaaaaa","level": "-45","frequency": "10","accuracy": "1","latitude": 35.3929,"longitude": 139.4155,"provider": "network"}'  -X POST -H "Content-Type:application/json, Accept-Version:v1" http://localhost:3000/api/v1/locations
+
+
+curl -d '{"ssid": "LILO505645","bssid": "00:11:22:33:44:55","capabilities": "aaaaaaaaa","level": "-45","frequency": "10","accuracy": "1","latitude": 35.3929,"longitude": 139.4155,"provider": "network"}'  -X POST -H "Content-Type:application/json, Accept-Version:v1" http://192.168.33.10/api/v1/locations
+
+
+
+`rescue in spec': Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'`
+to your Gemfile (and ensure its version is at the minimum required by ActiveRecord). (Gem::LoadError)

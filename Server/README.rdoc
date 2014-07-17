@@ -1,0 +1,30 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+curl -d '{"latitude": 35.3929, "longitude": 139.4155, "wifi_ssid": "Test1111", "wifi_macaddress": "00:11:22:33:44:55", "wifi_rssi": -60}'  -X POST -H "Content-Type:application/json, Accept-Version:v1" http://localhost:3000/api/v1/locations

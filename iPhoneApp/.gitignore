@@ -1,0 +1,7 @@
+build/
+Pods/
+**/xcuserdata/
+
+
+PoiCaSensor/
+ZDC/

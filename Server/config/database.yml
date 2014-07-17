@@ -1,0 +1,31 @@
+development: &development
+  adapter: mysql2
+  encoding: utf8
+  database: airtrack
+  host: localhost
+  username: root
+  password: rootpasswd
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  database: airtrack_test
+  host: localhost
+  username: root
+  password: rootpasswd
+
+staging: &staging
+  adapter: mysql2
+  encoding: utf8
+  database: airtrack
+  host: airtrack.caivmzlalbjo.ap-northeast-1.rds.amazonaws.com
+  username: root
+  password: rootpasswd
+
+production: &production
+  adapter: mysql2
+  encoding: utf8
+  database: airtrack
+  host: airtrack.caivmzlalbjo.ap-northeast-1.rds.amazonaws.com
+  username: root
+  password: rootpasswd

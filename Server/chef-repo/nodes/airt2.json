@@ -1,0 +1,13 @@
+{
+  "run_list": [
+        "recipe[yum]",
+        "recipe[yum-epel]",
+        "recipe[git]",
+        "recipe[ssh]",
+        "recipe[nginx]",
+        "recipe[rbenv-ruby]"
+  ],
+  "automatic": {
+    "ipaddress": "airt2"
+  }
+}
