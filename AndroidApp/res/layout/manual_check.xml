@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:inputType="numberDecimal"
+            android:layout_weight="1"
+            android:hint="緯度"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:inputType="numberDecimal"
+            android:layout_weight="1"
+            android:hint="経度"
+            android:ems="10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextAccuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:inputType="numberDecimal"
+            android:layout_weight="1"
+            android:hint="測定誤差"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/btnDateSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="----/--/-- --:--" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Check" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="【結果表示】" />
+
+ 	<ScrollView
+ 	   	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" >
+    	<TextView
+        	android:id="@+id/textViewManualResult"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"/>
+ 	</ScrollView>
+    
+</LinearLayout>

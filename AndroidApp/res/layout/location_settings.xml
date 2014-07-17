@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/label_sid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SID"
+            android:background="#cecece"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/locationSID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:inputType="text"
+            android:ems="10" >
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/label_uid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UID"
+            android:background="#cecece"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/locationUID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:inputType="text"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/label_appid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="APPID"
+            android:background="#cecece"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/locationAPPID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:inputType="text"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/label_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="測位間隔(sec)"
+            android:background="#cecece"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/locationInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/label_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cecece"
+            android:text="プロバイダー" />
+
+        <CheckBox
+            android:id="@+id/checkBox_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS" />
+
+        <CheckBox
+            android:id="@+id/checkBox_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ネットワーク" />
+
+        <CheckBox
+            android:id="@+id/checkBox_docomo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOCOMO" />
+
+        <TextView
+            android:id="@+id/label_locationURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="位置情報送信サーバ"
+            android:background="#cecece"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox_sendLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="位置情報送信許可" />
+        
+        <EditText
+            android:id="@+id/locationURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:inputType="text"
+            android:ems="10" />
+
+
+        <TextView
+            android:id="@+id/label_settingURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="設定変更情報サーバ"
+            android:background="#cecece"
+            />
+
+        <EditText
+            android:id="@+id/settingURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:inputType="text"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/label_debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="デバックモード"
+            android:background="#cecece"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox_debug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="デバック" />
+        
+        <Button
+            android:id="@+id/locationSettingOK"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</ScrollView>
