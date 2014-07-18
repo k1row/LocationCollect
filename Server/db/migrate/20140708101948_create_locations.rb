@@ -7,8 +7,8 @@ class CreateLocations < ActiveRecord::Migration
 			t.string :level, limit: 255, null: false
 			t.string :frequency, limit: 255, null: false
 			t.string :accuracy, limit: 255, null: false
-			t.decimal :latitude, precision: 11, scale: 8, null: false
-			t.decimal :longitude, precision: 11, scale: 8, null: false
+			t.string :latitude, limit: 255, null: false
+			t.string :longitude, limit: 255, null: false
 			t.string :provider, limit: 255, null: false
 			t.timestamps null: false
 		end

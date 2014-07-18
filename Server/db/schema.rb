@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718033954) do
+ActiveRecord::Schema.define(version: 20140718090054) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,17 +47,17 @@ ActiveRecord::Schema.define(version: 20140718033954) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "locations", force: true do |t|
-    t.string   "ssid",                                  null: false
-    t.string   "bssid",                                 null: false
-    t.string   "capabilities",                          null: false
-    t.string   "level",                                 null: false
-    t.string   "frequency",                             null: false
-    t.string   "accuracy",                              null: false
-    t.decimal  "latitude",     precision: 11, scale: 8, null: false
-    t.decimal  "longitude",    precision: 11, scale: 8, null: false
-    t.string   "provider",                              null: false
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.string   "ssid"
+    t.string   "bssid",        null: false
+    t.string   "capabilities", null: false
+    t.string   "level",        null: false
+    t.string   "frequency",    null: false
+    t.string   "accuracy",     null: false
+    t.string   "latitude",     null: false
+    t.string   "longitude",    null: false
+    t.string   "provider",     null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "locations", ["ssid", "bssid", "level"], name: "index_locations_on_ssid_and_bssid_and_level", unique: true, using: :btree

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Location do
-	describe '#ssid' do
-		it { should validate_presence_of(:ssid) }
-	end
+	#describe '#ssid' do
+	#	it { should validate_presence_of(:ssid) }
+	#end
 
 	describe '#bssid' do
 		it { should validate_presence_of(:bssid) }

@@ -240,4 +240,7 @@ ActiveAdmin.setup do |config|
   #
   # config.filters = true
 
+  if Rails.env == "production"
+    config.register_stylesheet 'active_admin_production.css'
+  end
 end

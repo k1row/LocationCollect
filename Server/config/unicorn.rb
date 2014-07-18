@@ -22,6 +22,8 @@ stderr_path File.expand_path('log/unicorn-stderr.log', ENV['RAILS_ROOT'])
 # before_fork, after_forkではUnicornのプロセスがフォークする前後の挙動を指定できる
 # 以下のおまじないの詳細はドキュメント参照
 before_fork do |server, worker|
+  ENV['BUNDLE_GEMFILE'] = File.expand_path('Gemfile', ENV['RAILS_ROOT'])
+
 	defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
 
 	old_pid = "#{server.config[:pid]}.oldbin"

@@ -16,7 +16,6 @@ gem 'rails-flog'
 gem 'unicorn'
 gem 'therubyracer'
 gem 'activeadmin', github: 'gregbell/active_admin'
-#gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'polyamorous'
 gem "formtastic", github: "justinfrench/formtastic"
 gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4.1"

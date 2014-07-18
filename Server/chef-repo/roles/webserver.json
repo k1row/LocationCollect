@@ -1,0 +1,21 @@
+{
+    "name": "webserver",
+    "description": "Web Server",
+    "json_class": "Chef::Role",
+    "chef_type": "role",
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[yum]",
+        "recipe[yum-epel]",
+        "recipe[git]",
+        "recipe[ssh]",
+        "recipe[nginx]",
+        "recipe[rbenv-ruby]",
+        "recipe[localedef]",
+        "recipe[timezone]",
+        "recipe[profile]"
+    ],
+    "env_run_lists": {
+    }
+}

@@ -1,9 +1,9 @@
 {
-  "name": "airt2",
+  "name": "airt1",
   "run_list": [
     "role[webserver]"
   ],
   "automatic": {
-    "ipaddress": "airt2"
+    "ipaddress": "airt1"
   }
 }
