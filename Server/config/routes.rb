@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-	 mount Endpoint::API => '/api'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  mount Endpoint::API => '/api'
 end

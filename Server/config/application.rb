@@ -32,6 +32,9 @@ module AirTrackServer
     I18n.enforce_available_locales = true
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja
+    # bypasses rails bug with i18n in production
+    I18n.reload!
+    config.i18n.reload!
 
     # Grape mounting
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')

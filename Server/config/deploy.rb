@@ -3,8 +3,8 @@ lock '3.2.1'
 
 set :application, 'AirTrackServer'
 
-set :repo_url, 'git@github.com:k1row/AirTrackServer.git'
-set :deploy_to, '/tmp/AirTrackServer'
+set :repo_url, 'git@github.com:CyberAgent/airt-server.git'
+set :deploy_to, '/tmp/airt-server'
 set :scm, :git
 set :branch, :master
 set :format, :pretty

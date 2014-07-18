@@ -12,6 +12,6 @@ class CreateLocations < ActiveRecord::Migration
 			t.string :provider, limit: 255, null: false
 			t.timestamps null: false
 		end
-		add_index :locations, [:ssid, :bssid], unique: true
+		add_index :locations, [:ssid, :bssid, :level], unique: true
 	end
 end

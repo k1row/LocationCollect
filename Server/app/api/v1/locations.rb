@@ -26,7 +26,6 @@ module Locations
       get do
         Location.all
       end
-
       desc "entry new location"
       post do
 

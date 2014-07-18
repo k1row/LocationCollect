@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.2'
 gem 'mysql2'
 gem 'grape'
 gem 'grape-rabl'
@@ -15,6 +15,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-flog'
 gem 'unicorn'
 gem 'therubyracer'
+gem 'activeadmin', github: 'gregbell/active_admin'
+#gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'polyamorous'
+gem "formtastic", github: "justinfrench/formtastic"
+gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4.1"
+gem "devise", github: "plataformatec/devise"
+
 
 group :development, :test do
   gem 'rspec-rails'

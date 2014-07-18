@@ -5,6 +5,11 @@
         "recipe[git]",
         "recipe[ssh]",
         "recipe[nginx]",
-        "recipe[rbenv-ruby]"
-  ]
+        "recipe[rbenv-ruby]",
+        "recipe[localedef]",
+        "recipe[timezone]"
+  ],
+  "automatic": {
+    "ipaddress": "airt1"
+  }
 }

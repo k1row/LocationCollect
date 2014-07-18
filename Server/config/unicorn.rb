@@ -5,7 +5,7 @@ RAILS_ROOT = File.expand_path("../..", __FILE__)
 listen "/tmp/unicorn.sock"
 pid "tmp/pids/unicorn.pid"
 
-working_directory "/tmp/AirTrackServer/current"
+working_directory "/tmp/airt-server/current"
 
 # ワーカの数を指定
 worker_processes 2

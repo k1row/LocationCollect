@@ -9,4 +9,4 @@ default[:nginx][:keepalive_timeout] = 10
 
 default[:nginx][:port] = 80
 default[:nginx][:server_name] = "54.92.87.182"
-default[:nginx][:root] = "/tmp/AirTrackServer/current/public"
+default[:nginx][:root] = "/tmp/airt-server/current/public"
