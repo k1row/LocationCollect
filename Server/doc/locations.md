@@ -7,20 +7,24 @@ Locationデータを新たに登録できる.
 ```
 POST /api/v1/locations HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Content-Length: 185
+Content-Length: 263
 Content-Type: application/json, Accept-Version:v1
 Host: www.example.com
 
 {
-  "ssid": "LILO5056444",
-  "bssid": "44:44:44:44:44",
+  "ssid": "LILO5056161616",
+  "bssid": "1616:1616:1616:1616:1616",
   "capabilities": "aaaaaaaaaa",
-  "level": "46",
-  "frequency": "16",
-  "accuracy": "6",
-  "latitude": "35.3929",
-  "longitude": "139.4155",
-  "provider": "network"
+  "level": "418",
+  "frequency": "118",
+  "accuracy": "18",
+  "latitude": 35.3929,
+  "longitude": 139.4155,
+  "provider": "network",
+  "device_id": "Likef923r02",
+  "way_id": "1",
+  "speed": "16",
+  "floor": "14"
 }
 ```
 
@@ -33,8 +37,8 @@ Content-Type: application/json
 ETag: "757b505cfd34c64c85ca5b5690ee5293"
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: b3c178e5-41f9-46e7-8168-b50713364898
-X-Runtime: 0.006442
+X-Request-Id: e6d11275-7186-4e18-a858-82a32ac8c143
+X-Runtime: 0.003849
 X-XSS-Protection: 1; mode=block
 ```
 
@@ -47,20 +51,24 @@ Locationsデータが１増える.
 ```
 POST /api/v1/locations HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Content-Length: 185
+Content-Length: 263
 Content-Type: application/json, Accept-Version:v1
 Host: www.example.com
 
 {
-  "ssid": "LILO5056555",
-  "bssid": "55:55:55:55:55",
+  "ssid": "LILO5056171717",
+  "bssid": "1717:1717:1717:1717:1717",
   "capabilities": "aaaaaaaaaa",
-  "level": "47",
-  "frequency": "17",
-  "accuracy": "7",
-  "latitude": "35.3929",
-  "longitude": "139.4155",
-  "provider": "network"
+  "level": "419",
+  "frequency": "119",
+  "accuracy": "19",
+  "latitude": 35.3929,
+  "longitude": 139.4155,
+  "provider": "network",
+  "device_id": "Likef923r02",
+  "way_id": "1",
+  "speed": "17",
+  "floor": "15"
 }
 ```
 
@@ -73,8 +81,8 @@ Content-Type: application/json
 ETag: "757b505cfd34c64c85ca5b5690ee5293"
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: ccf5161b-ef2f-49f5-9446-7769057945d8
-X-Runtime: 0.002982onn
+X-Request-Id: a1219b3e-803b-4e28-b743-f095e097587c
+X-Runtime: 0.004776
 X-XSS-Protection: 1; mode=block
 ```
 
@@ -101,8 +109,8 @@ Content-Type: application/json
 ETag: "d751713988987e9331980363e24189ce"
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 5b8b90cc-e97c-434e-8a07-54169f23351d
-X-Runtime: 0.003475
+X-Request-Id: c28f5d09-5695-40eb-97ae-9f7f6c877b80
+X-Runtime: 0.003887
 X-XSS-Protection: 1; mode=block
 
 [

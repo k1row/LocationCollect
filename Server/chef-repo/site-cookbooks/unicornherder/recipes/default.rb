@@ -1,15 +1,14 @@
 #
-# Cookbook Name:: timezone
+# Cookbook Name:: unicornherder
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
 #
-
-bash "cp localtime" do
+bash "install unicornherder" do
   user "root"
   code <<-EOH
-    ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+    pip install unicornherder
   EOH
 end

@@ -14,7 +14,11 @@
         "recipe[rbenv-ruby]",
         "recipe[localedef]",
         "recipe[timezone]",
-        "recipe[profile]"
+        "recipe[profile]",
+        "recipe[python-devel]",
+        "recipe[python-pip]",
+        "recipe[unicornherder]",
+        "recipe[supervisor]"
     ],
     "env_run_lists": {
     }

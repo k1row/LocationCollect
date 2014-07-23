@@ -37,4 +37,16 @@ describe Location do
 		it { should validate_presence_of(:provider) }
 	end
 
+	describe '#device_id' do
+		it { should validate_presence_of(:device_id) }
+	end
+
+	describe '#way_id' do
+		it { should validate_presence_of(:way_id) }
+	end
+
+	describe '#speed' do
+		it { should validate_presence_of(:speed) }
+	end
+
 end

@@ -5,14 +5,14 @@ module Locations
 		default_format :json
 
     rescue_from :all do |e|
-      Rack::Response.new([ e.message ], 500, { "Content-type" => "application/json" }).finish
+      Rack::Response.new([ e.message ], 406, { "Content-type" => "application/json" }).finish
     end
 
     rescue_from ArgumentError do |e|
-      Rack::Response.new([ "ArgumentError: #{e.message}" ], 500).finish
+      Rack::Response.new([ "ArgumentError: #{e.message}" ], 406).finish
     end
     rescue_from NotImplementedError do |e|
-      Rack::Response.new([ "NotImplementedError: #{e.message}" ], 500).finish
+      Rack::Response.new([ "NotImplementedError: #{e.message}" ], 406).finish
     end
 
     version "v1", using: :path
@@ -38,9 +38,12 @@ module Locations
           accuracy: params[:accuracy],
           latitude: params[:latitude],
           longitude: params[:longitude],
-          provider: params[:provider]
+          provider: params[:provider],
+          device_id: params[:device_id],
+          way_id: params[:way_id],
+          speed: params[:speed],
+          floor: params[:floor]
           })
-
 
         status 201  # 正常終了
       end

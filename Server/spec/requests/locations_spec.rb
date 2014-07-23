@@ -129,6 +129,178 @@ describe Endpoint::API do
 					}.not_to change(Location, :count)
  			end
 		end
+
+		context 'device_idが入っていない時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, device_id: '')
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Deviceを入力してください。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+		context 'way_idが入っていない時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, way_id: '')
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Wayを入力してください。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+=begin
+		context '定義されていないway_idが来た時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, way_id: 115)
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Wayを入力してください。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+=end
+
+		context 'speedが入っていない時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, speed: '')
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Speedは数値で入力してください。, Speedは一覧にありません。, Speedを入力してください。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+		context 'speedがマイナス時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, speed: -10)
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Speedは一覧にありません。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+		context 'speedが100を超えている時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, speed: 101)
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Speedは一覧にありません。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+		context 'floorが-2以下の時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, floor: -4)
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Floorは一覧にありません。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
+
+		context 'floorが23以上の時' do
+			let(:path) {'/api/v1/locations'}
+
+			before do
+				@params = FactoryGirl.attributes_for(:location, floor: 40)
+			end
+
+			it '500 が返ってくる' do
+				post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+				expect(response).not_to be_success
+				expect(response.status).to eq(500)
+			  expect(response.body).to eq('バリデーションに失敗しました。 Floorは一覧にありません。')
+			end
+
+			it 'locationsデータは増減しない' do
+				expect {
+					post path, @params.to_json, 'CONTENT_TYPE' => 'application/json, Accept-Version:v1'
+					}.not_to change(Location, :count)
+ 			end
+		end
+
 	end
 
 	describe 'PUT /api/v1/locations' do

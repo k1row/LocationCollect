@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718090054) do
+ActiveRecord::Schema.define(version: 20140722054217) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -48,18 +48,28 @@ ActiveRecord::Schema.define(version: 20140718090054) do
 
   create_table "locations", force: true do |t|
     t.string   "ssid"
-    t.string   "bssid",        null: false
-    t.string   "capabilities", null: false
-    t.string   "level",        null: false
-    t.string   "frequency",    null: false
-    t.string   "accuracy",     null: false
-    t.string   "latitude",     null: false
-    t.string   "longitude",    null: false
-    t.string   "provider",     null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "bssid",                    null: false
+    t.string   "capabilities",             null: false
+    t.string   "level",                    null: false
+    t.string   "frequency",                null: false
+    t.string   "accuracy",                 null: false
+    t.string   "latitude",                 null: false
+    t.string   "longitude",                null: false
+    t.string   "provider",                 null: false
+    t.string   "device_id",                null: false
+    t.integer  "way_id",                   null: false
+    t.integer  "speed",                    null: false
+    t.integer  "floor",        default: 0, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
-  add_index "locations", ["ssid", "bssid", "level"], name: "index_locations_on_ssid_and_bssid_and_level", unique: true, using: :btree
+  add_index "locations", ["ssid", "bssid"], name: "index_locations_on_ssid_and_bssid", using: :btree
+
+  create_table "ways", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

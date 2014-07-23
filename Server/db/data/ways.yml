@@ -1,0 +1,21 @@
+# List of ways
+
+master_data:
+
+  - id: 1
+    name: 徒歩
+
+  - id: 2
+    name: 電車（中央）
+
+  - id: 3
+    name: 電車（窓）
+
+  - id: 4
+    name: タクシー/車（フロント）
+
+  - id: 5
+    name: タクシー/車（トランク）
+
+  - id: 6
+    name: 自転車

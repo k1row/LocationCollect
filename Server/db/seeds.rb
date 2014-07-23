@@ -6,4 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-AdminUser.create(email: "admin@example.com", password: "password”)
+seed_data_dir = "#{Rails.root}/db/data"
+
+AdminUser.create(email: 'admin@airtrack.jp', password: 'airtrack', password_confirmation: 'airtrack')
+
+
+# Timezone
+seed_data = YAML.load_file("#{seed_data_dir}/ways.yml")
+seed_data["master_data"].each do |mst|
+  s = Way.find_or_initialize_by(id: mst["id"])
+  s.id    = mst["id"]
+  s.name  = mst["name"]
+  s.save!
+end
